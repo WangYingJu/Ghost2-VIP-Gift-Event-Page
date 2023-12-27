@@ -1,0 +1,604 @@
+:root {
+  --color-primary: #463875;
+  --color-subordinate: #b5aecc;
+  --color-attention: #ffd162;
+}
+
+html {
+  /*
+    當 100vw = 1920px 時，除以 19.2 可以讓 font-size 變成 100px
+    在其他屬性時，原先使用 px 單位改成 rem，就可以隨螢幕尺寸等比例縮放
+    例如：24px 的字，寫成 0.24rem
+  */
+  font-size: calc(100vw / 19.2);
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #d9dae8;
+  overflow-x: hidden;
+}
+
+/* 移除樣式 */
+button {
+  padding: 0;
+  border: 0;
+  background-color: unset;
+  outline: none;
+  -webkit-appearance: none; /*用於IOS下移除原生樣式*/
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+  /* border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9dae8;
+  /* border-radius: 10px; */
+}
+
+/* 音檔播放鍵 */
+.play-button {
+  width: 0.4rem;
+  height: 0.4rem;
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  opacity: 0.8;
+  transform: scale(0.9, 0.9);
+}
+
+.container1 {
+  background: url("../image/PC_bg_01.jpg") no-repeat center top;
+  background-size: 19.2rem 11.46rem;
+  height: 11.46rem;
+}
+
+.container2 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_02.jpg") no-repeat center top;
+  background-size: 19.2rem 6.06rem;
+  height: 6.06rem;
+}
+
+.container3 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_03.jpg") no-repeat center top;
+  background-size: 19.2rem 8.6rem;
+  height: 8.6rem;
+}
+
+.container4 {
+  margin-top: -0.02rem;
+  background: url("../image/PC_bg_04.jpg") no-repeat center top;
+  background-size: 19.2rem 6.88rem;
+  height: 6.88rem;
+}
+
+.d-f {
+  display: flex;
+}
+
+.j-c-c {
+  justify-content: center;
+}
+
+.a-i-c {
+  align-items: center;
+}
+
+.j-c-sb {
+  justify-content: space-between;
+}
+
+.po-re {
+  position: relative;
+}
+
+.po-ab {
+  position: absolute;
+}
+
+.pc-d-none {
+  display: none;
+}
+
+.sp-d-none {
+  display: block;
+}
+
+/* header */
+.header {
+  z-index: 2;
+  left: calc((19.2rem - 16rem) / 2);
+}
+
+.container0 {
+  width: 16rem;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.header .logo {
+  width: 1.5rem;
+  transform: scale(1, 1);
+  transition: all 1s ease-out;
+}
+
+.header .logo:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.player {
+  margin-left: auto;
+}
+
+/* cotainer1 */
+.title {
+  width: 2.72rem;
+  height: 5.16rem;
+  top: 0.6rem;
+  left: calc(50% - (2.72rem / 2));
+}
+
+img.title {
+  animation: bounce ease-out 8s infinite;
+  -webkit-animation: bounce ease-out 8s infinite;
+  -moz-animation: bounce ease-out 8s infinite;
+}
+
+.logo-game {
+  z-index: 1;
+  width: 4.24rem;
+  height: 1.89rem;
+  top: 6.5rem;
+  left: calc(50% - (4.24rem / 2));
+  transform: scale(1, 1);
+  transition: all 1s ease-out;
+}
+
+.logo-game:hover {
+  transform: scale(0.9, 0.9);
+}
+
+/* container2 */
+.gift-bn {
+  margin: 0 auto;
+  width: 6.93rem;
+  padding-top: 0.95rem;
+}
+.gift-bn img {
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+/* container3 */
+/* 鳥群 */
+.bird01 {
+  top: 0;
+  left: 5%;
+  width: 1.87rem;
+  height: 1.54rem;
+}
+
+.bird02 {
+  top: 3rem;
+  right: 40%;
+  width: 1.67rem;
+  height: 1.03rem;
+}
+
+.bird03 {
+  top: 1.8rem;
+  right: 30%;
+  width: 2.69rem;
+  height: 1.26rem;
+}
+
+.bird04 {
+  top: 9.8rem;
+  right: 18%;
+  width: 5.37rem;
+  height: 2.76rem;
+  z-index: 1;
+}
+
+.container3 .wrap {
+  width: 7.5rem;
+  margin: 0 auto;
+  padding-top: 0.24rem;
+}
+
+.sub-title img {
+  margin: 0 auto 0.32rem auto;
+}
+
+h2.sub-title img {
+  width: 3.52rem;
+  height: 0.9rem;
+}
+
+h3.sub-title img {
+  width: 4.5rem;
+  height: 0.27rem;
+}
+
+.condition-list {
+  margin-bottom: 0.6rem;
+  margin-left: 0.2rem;
+}
+
+.condition-items {
+  font-size: 0.2rem;
+  line-height: 1.5;
+  list-style: decimal;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.condition-items span {
+  color: var(--color-subordinate);
+}
+
+.step-line {
+  top: -0.3rem;
+  left: -0.6rem;
+  width: 8.79rem;
+  height: 0.73rem;
+}
+
+.step-box {
+  top: -0.2rem;
+  z-index: 2;
+}
+
+.step-list {
+  width: 7.5rem;
+  height: 4.2rem;
+  margin: 0;
+}
+
+.step-self {
+  align-self: flex-end;
+}
+
+.step-items img {
+  width: 2.13rem;
+  height: 3.51rem;
+  transform: scale(1, 1);
+  transition: all 1s ease-out;
+}
+
+.step-items img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.step-self img {
+  width: 2.13rem;
+  height: 3.88rem;
+}
+
+/* container4 */
+.container4 .wrap {
+  width: 12rem;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.note-list {
+  list-style: decimal;
+  padding-left: 0.16rem;
+  padding-right: 0.16rem;
+  height: 5.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.note-items {
+  font-size: 0.16rem;
+  line-height: 1.5;
+  color: white;
+  font-weight: normal;
+  text-align: justify;
+  letter-spacing: 0.02rem;
+  margin-left: 0.16rem;
+}
+
+.note-items a {
+  color: var(--color-attention);
+}
+
+.note-items a:hover {
+  color: orange;
+}
+
+/* footer */
+.footer {
+  background-color: #d9dae8;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer .wrap {
+  max-width: 12rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ican-logo img {
+  width: 1rem;
+}
+
+.all-right {
+  font-size: 0.12rem;
+  line-height: 1.2;
+  color: black;
+  margin-left: 0.2rem;
+}
+
+.logos img {
+  width: 1.5rem;
+}
+
+.age15 img {
+  height: 100%;
+}
+
+.note-15 {
+  font-size: 0.12rem;
+  line-height: 1.2;
+  color: black;
+  list-style: disc;
+  margin-left: 0.4rem;
+  width: 3rem;
+  font-weight: 300;
+}
+
+@media (max-width: 1100px) {
+  .container4 .wrap {
+    width: 14.5rem;
+  }
+
+  .container4 .note-list {
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: calc(100vw / 7.5);
+  }
+
+  .play-button {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .container1 {
+    background: url("../image/SP_bg_01.jpg") no-repeat center top;
+    background-size: 7.5rem 11.9rem;
+    height: 11.9rem;
+  }
+
+  .container2 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_02.jpg") no-repeat center top;
+    background-size: 7.5rem 4.99rem;
+    height: 4.99rem;
+  }
+
+  .container3 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_03.jpg") no-repeat center top;
+    background-size: 7.5rem 18.79rem;
+    height: 18.79rem;
+  }
+
+  .container4 {
+    margin-top: -0.02rem;
+    background: url("../image/SP_bg_04.jpg") no-repeat center top;
+    background-size: 7.5rem 9.5rem;
+    height: 9.5rem;
+  }
+
+  .pc-d-none {
+    display: block;
+  }
+
+  .sp-d-none {
+    display: none;
+  }
+
+  .header {
+    left: calc((7.5rem - 7rem) / 2);
+  }
+
+  .header .sign-img {
+    width: 0.8rem;
+  }
+
+  .container0 {
+    width: 7rem;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .title {
+    width: 3.3rem;
+    height: 6.99rem;
+    top: 1.2rem;
+    left: calc(48%);
+  }
+
+  .logo-game {
+    top: 7.2rem;
+  }
+
+  .gift-bn img {
+    width: 81%;
+    margin: 0 auto;
+  }
+
+  .container3 .wrap {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 4.2rem;
+  }
+
+  .sub-title img {
+    margin: 0 auto 0.6rem auto;
+  }
+
+  h2.sub-title img {
+    width: 5.28rem;
+    height: 1.35rem;
+  }
+
+  h3.sub-title img {
+    width: 6.75rem;
+    height: 0.405rem;
+  }
+
+  .condition-list {
+    width: 90%;
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .condition-items {
+    font-size: 0.3rem;
+  }
+
+  .sp-step-list {
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sp-step-items img {
+    max-width: 100%;
+  }
+
+  .container4 .wrap {
+    width: 82%;
+  }
+
+  .container4 .note-list {
+    padding-left: 0.1rem;
+    height: 5.5rem;
+  }
+
+  .note-items {
+    font-size: 0.2rem;
+  }
+
+  .footer .wrap {
+    max-width: 90%;
+    flex-direction: column;
+  }
+
+  .logos {
+    margin-bottom: 0.2rem;
+    margin-top: 0.1rem;
+  }
+
+  .logos img {
+    width: 2.5rem;
+  }
+
+  .all-right {
+    font-size: 0.23rem;
+  }
+
+  .note-15 {
+    width: 4rem;
+    font-size: 0.23rem;
+    margin-left: 0.6rem;
+  }
+}
+
+/* 動畫 animation*/
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
